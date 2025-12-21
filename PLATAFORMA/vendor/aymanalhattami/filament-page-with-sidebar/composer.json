@@ -1,0 +1,60 @@
+{
+    "name": "aymanalhattami/filament-page-with-sidebar",
+    "description": "Organize resource pages in sidebar instead of putting all the buttons and links elsewhere in order to make navigation between pages more comfortable.",
+    "type": "library",
+    "require": {
+        "filament/filament": "^3.0",
+        "spatie/laravel-package-tools": "^1.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^8.0",
+        "larastan/larastan": "^2.0",
+        "orchestra/testbench": "^9.0",
+        "pestphp/pest": "^3.0",
+        "pestphp/pest-plugin-arch": "^3.0",
+        "pestphp/pest-plugin-laravel": "^3.0",
+        "phpstan/extension-installer": "^1.0",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "AymanAlhattami\\FilamentPageWithSidebar\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AymanAlhattami\\FilamentPageWithSidebar\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ayman Alhattami",
+            "email": "ayman.m.alhattami@gmail.com"
+        }
+    ],
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AymanAlhattami\\FilamentPageWithSidebar\\FilamentPageWithSidebarServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    }
+}
