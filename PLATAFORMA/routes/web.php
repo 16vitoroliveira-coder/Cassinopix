@@ -86,6 +86,7 @@ include_once(__DIR__ . '/groups/gateways/stripe.php');
 include_once(__DIR__ . '/groups/gateways/ezzepay.php');
 include_once(__DIR__ . '/groups/gateways/digitopay.php');
 include_once(__DIR__ . '/groups/gateways/ondapay.php');
+include_once(__DIR__ . '/groups/gateways/ironpay.php');
 
 /// SOCIAL
 /// include_once(__DIR__ . '/groups/auth/social.php');

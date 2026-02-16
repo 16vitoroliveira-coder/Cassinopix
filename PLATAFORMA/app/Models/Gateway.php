@@ -55,6 +55,11 @@ class Gateway extends Model
         'bspay_cliente_id',
         'bspay_cliente_secret',
 
+        //IronPay
+        'ironpay_token',
+        'ironpay_offer_hash',
+        'ironpay_product_hash',
+
     ];
 
     protected $hidden = array('updated_at');

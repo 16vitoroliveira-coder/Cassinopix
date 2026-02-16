@@ -69,6 +69,7 @@ class Setting extends Model
 
         'stripe_is_enable',
         'bspay_is_enable',
+        'ironpay_is_enable',
         'saque',
 
         // Percent

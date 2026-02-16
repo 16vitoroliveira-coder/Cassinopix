@@ -10,12 +10,13 @@ use App\Traits\Gateways\EzzepayTrait;
 use App\Traits\Gateways\BsPayTrait;
 use App\Traits\Gateways\OndaPayTrait;
 use App\Traits\Gateways\SuitpayTrait;
+use App\Traits\Gateways\IronPayTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
 class DepositController extends Controller
 {
-    use SuitpayTrait, DigitoPayTrait, EzzepayTrait, BsPayTrait, OndaPayTrait;
+    use SuitpayTrait, DigitoPayTrait, EzzepayTrait, BsPayTrait, OndaPayTrait, IronPayTrait;
 
     /**
      * @param Request $request
@@ -34,6 +35,8 @@ class DepositController extends Controller
                 return self::requestQrCodeOnda($request);
             case 'bspay':
                 return self::requestQrcodeBsPay($request);
+            case 'ironpay':
+                return self::requestQrcodeIronPay($request);
         }
     }
 

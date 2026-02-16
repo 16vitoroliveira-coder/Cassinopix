@@ -837,6 +837,7 @@ class Core
             'digito_is_enable',
             'ondapay_is_enable',
             'ezzepay_is_enable',
+            'ironpay_is_enable',
             'disable_spin',
             'cpa_baseline',
             'cpa_value',
